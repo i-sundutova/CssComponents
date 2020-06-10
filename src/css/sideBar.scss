@@ -1,0 +1,24 @@
+#sideBar {
+    text-align: center;
+
+    .menuLink {
+        display: block;
+        border-bottom: none;
+        color: $color-primary;
+        padding: 15px 0;
+
+        & + .menuLink {
+            border-top: 1px solid $color-secondary;
+        }
+
+        &.active {
+            background-color: rgba($color-accent, 0.4);
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: $color-accent;
+        }
+    }
+}
