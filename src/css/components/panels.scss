@@ -1,0 +1,138 @@
+﻿@import "./variables.scss";
+
+.panel {
+    @include box-shadow();
+    background: $color-secondary;
+    overflow: hidden;
+    margin-bottom: 15px;
+
+    & > .panel-heading, & > .panel-body {
+        padding: 20px 30px;
+
+        @include media-for-screen-lg-and-down {
+            padding: 20px 25px;
+        }
+
+        @include media-for-screen-md-and-down {
+            padding: 20px 20px;
+        }
+    }
+
+    & > .panel-heading {
+        position: relative;
+        border-bottom: 1px solid $color-secondary;
+        font-weight: 600;
+        font-size: 16px;
+        display: table;
+        width: 100%;
+
+        & > .heading-icon {
+            display: table-cell;
+            vertical-align: middle;
+            width: 1px;
+            padding-right: 20px;
+            line-height: 0;
+        }
+
+        & > .heading-content {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .description {
+            display: block;
+            text-transform: none;
+            font-weight: 400;
+            font-size: 14px;
+
+            @include media-for-screen-lg-and-down {
+                font-size: 13px;
+            }
+        }
+    }
+
+    & > .panel-body {
+        & > hr {
+            margin: 20px -30px;
+
+            @include media-for-screen-lg-and-down {
+                margin: 20px -25px;
+            }
+        }
+    }
+
+    &.collapsible {
+        & > .panel-heading {
+            cursor: pointer;
+            padding-right: 70px;
+
+            @include media-for-screen-lg-and-down {
+                padding-right: 60px;
+            }
+
+            @include media-for-screen-md-and-down {
+                padding-right: 40px;
+            }
+
+            &:after {
+                content: '>';
+                position: absolute;
+                right: 30px;
+                top: calc(50% - 13px);
+                font-size: 26px;
+                line-height: 1;
+
+                @include media-for-screen-lg-and-down {
+                    right: 25px;
+                }
+
+                @include media-for-screen-md-and-down {
+                    right: 10px;
+                }
+            }
+        }
+
+        &.collapsed {
+            & > .panel-heading {
+                border-bottom: none;
+
+                &:after {
+                    content: '<';
+                }
+            }
+        }
+    }
+    /*#region colors */
+    &.default {
+        & > .panel-heading {
+            background: $color-secondary;
+            border-color: $color-secondary;
+            color: $color-secondary;
+
+            .description {
+                color: $color-secondary;
+            }
+        }
+
+        &.collapsible > .panel-heading:hover {
+            background: darken($color-secondary, 1%);
+        }
+    }
+
+    &.accent {
+        & > .panel-heading {
+            background: $color-primary;
+            border-color: $color-primary;
+            color: $color-secondary;
+
+            .description {
+                color: $color-secondary;
+            }
+        }
+
+        &.collapsible > .panel-heading:hover {
+            opacity: 0.9;
+        }
+    }
+    /*#endregion */
+}
