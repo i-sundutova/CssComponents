@@ -29,8 +29,8 @@
 }
 
 @mixin box-shadow() {
-    -webkit-box-shadow: 0px 3px 8px rgba($color-primary-extra,.03) !important;
-    box-shadow: 0px 3px 8px rgba($color-primary-extra,.03) !important;
+    -webkit-box-shadow: 0px 3px 8px rgba($color-primary,.03) !important;
+    box-shadow: 0px 3px 8px rgba($color-primary,.03) !important;
 }
 
 @mixin placeholder() {

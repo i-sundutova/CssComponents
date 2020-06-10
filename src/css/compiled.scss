@@ -3,10 +3,12 @@
 
 @import 'variables.scss';
 
-@import 'grid.scss';
-@import 'alerts.scss';
-@import 'buttons.scss';
-@import 'lists.scss';
+@import 'components/grid.scss';
+@import 'components/alerts.scss';
+@import 'components/buttons.scss';
+@import 'components/lists.scss';
+@import 'components/panels.scss';
+@import 'components/tables.scss';
 
 @import 'common.scss';
 @import 'typography.scss';

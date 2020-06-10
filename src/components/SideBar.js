@@ -7,6 +7,7 @@ const SideBar = (props) => {
          <NavLink to="/alerts" className="menuLink">Alerts</NavLink>
          <NavLink to="/buttons" className="menuLink">Buttons</NavLink>
          <NavLink to="/grid" className="menuLink">Grid</NavLink>
+         <NavLink to="/tables" className="menuLink">Tables</NavLink>
       </div>
    );
 };
